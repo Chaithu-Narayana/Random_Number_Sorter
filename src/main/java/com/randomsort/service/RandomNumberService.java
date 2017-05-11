@@ -1,7 +1,10 @@
-package com.randomsort;
+package com.randomsort.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.randomsort.model.RandomNumber;
+import com.randomsort.repo.RandomNumberRepository;
 
 @Service
 public class RandomNumberService {

@@ -1,4 +1,4 @@
-package com.randomsort;
+package com.randomsort.model;
 
 import java.io.Serializable;
 

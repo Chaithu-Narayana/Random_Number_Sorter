@@ -1,4 +1,4 @@
-package com.randomsort;
+package com.randomsort.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.randomsort.model.RandomNumber;
+import com.randomsort.service.RandomNumberService;
+
 @Controller
 @RequestMapping("/index")
 public class RandomNumberController {
@@ -19,7 +22,7 @@ public class RandomNumberController {
 	@Autowired
 	private RandomNumberService randomNumberService;
 
-	@RequestMapping(value = "", method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView generateRandomNumbers() {
 		ModelAndView model = new ModelAndView("index");
 		return model;
@@ -50,7 +53,7 @@ public class RandomNumberController {
 		
 		RandomNumber randomNumber = new RandomNumber();
 		randomNumber.setInput(randomNumbers);
-		String sortedString[] = new RestTemplate().getForObject("http://localhost:8080/sortRandomNumbers/"+randomNumbers, String.class).split(":");
+		String sortedString[] = new RestTemplate().getForObject("http://localhost:8081/sortRandomNumbers/"+randomNumbers, String.class).split(":");
 		randomNumber.setOutput(sortedString[0]);
 		randomNumber.setCount(sortedString[1]);
 		randomNumberService.saveRandomNumber(randomNumber);
