@@ -29,7 +29,6 @@
 			            </td>
 			        </tr>
 			    </table>
-			    <b><c:out value="${danger}"></c:out></b>
 			</form>
 		
 			<h3>Generated Random Numbers</h3>
