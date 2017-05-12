@@ -13,7 +13,8 @@ public class RandomNumberService {
 	private RandomNumberRepository randomNumberRepository;
 	
 	public Iterable<RandomNumber> getSortedNumbers() {
-		return randomNumberRepository.findAll();
+		//return randomNumberRepository.findAll(new Sort(Sort.Direction.DESC, id));
+		return randomNumberRepository.findAllByOrderByIdDesc();
 	}
 
 	public RandomNumber saveRandomNumber(RandomNumber randomNumber) {
