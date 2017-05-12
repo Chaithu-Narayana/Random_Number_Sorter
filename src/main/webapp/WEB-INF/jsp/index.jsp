@@ -3,10 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Random Sort</title>
-<link rel="stylesheet" type="text/css"
-	href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
-<script type="text/javascript"
-	src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+<script type="text/javascript" src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script language="javascript">
 	function submitSortforms() {
 		document.getElementById("sortForm").submit();
@@ -67,9 +65,9 @@
 			<tbody>
 				<c:forEach items="${randomNumbersList}" var="randomNumber">
 					<tr>
-						<td><c:out value="${randomNumber.input}"></c:out></td>
-						<td><c:out value="${randomNumber.output}"></c:out></td>
-						<td><c:out value="${randomNumber.count}"></c:out></td>
+						<td class="col-md-5"><c:out value="${randomNumber.input}"></c:out></td>
+						<td class="col-md-5"><c:out value="${randomNumber.output}"></c:out></td>
+						<td class="col-md-2"><c:out value="${randomNumber.count}"></c:out></td>
 					</tr>
 				</c:forEach>
 			</tbody>
