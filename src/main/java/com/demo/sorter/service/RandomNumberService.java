@@ -3,8 +3,8 @@ package com.demo.sorter.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.demo.sorter.model.RandomNumber;
-import com.demo.sorter.repository.RandomNumberRepository;
+import com.demo.sorter.model.SortDetails;
+import com.demo.sorter.repository.SortDetailsRepository;
 
 /**
  * Services the operations requested by the Sorter App controller
@@ -14,14 +14,14 @@ import com.demo.sorter.repository.RandomNumberRepository;
 public class RandomNumberService {
 
 	@Autowired
-	private RandomNumberRepository randomNumberRepository;
+	private SortDetailsRepository randomNumberRepository;
 	
 	/**
 	 * Retrieves the previous results of sorted numbers from DB
 	 * 
 	 * @return
 	 */
-	public Iterable<RandomNumber> getSortedNumbers() {
+	public Iterable<SortDetails> getSortedNumbers() {
 		return randomNumberRepository.findAllByOrderByIdDesc();
 	}
 
@@ -31,7 +31,7 @@ public class RandomNumberService {
 	 * @param randomNumber
 	 * @return
 	 */
-	public RandomNumber saveRandomNumber(RandomNumber randomNumber) {
+	public SortDetails saveRandomNumber(SortDetails randomNumber) {
 		return randomNumberRepository.save(randomNumber);
 	}
 }

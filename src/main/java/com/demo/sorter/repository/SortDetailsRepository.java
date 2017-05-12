@@ -4,14 +4,14 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.demo.sorter.model.RandomNumber;
+import com.demo.sorter.model.SortDetails;
 
 /**
  * Interface for generic CRUD operations on the Number Sorting repository  
  *
  */
-public interface RandomNumberRepository extends CrudRepository<RandomNumber, Integer> {
+public interface SortDetailsRepository extends CrudRepository<SortDetails, Integer> {
 	
-	List<RandomNumber> findAllByOrderByIdDesc();
+	List<SortDetails> findAllByOrderByIdDesc();
 
 }

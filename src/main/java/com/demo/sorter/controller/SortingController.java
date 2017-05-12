@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  *
  */
 @RestController
-public class SortRandomNumbersController {
+public class SortingController {
 	
 	private static int minValue, minIndex, swapCount;
 	

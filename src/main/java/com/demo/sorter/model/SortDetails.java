@@ -12,7 +12,7 @@ import javax.persistence.Id;
  *
  */
 @Entity
-public class RandomNumber implements Serializable {
+public class SortDetails implements Serializable {
 	private static final long serialVersionUID = 258653472782572573L;
 
 	@Id
@@ -31,10 +31,10 @@ public class RandomNumber implements Serializable {
 	// The time taken to sort the nos in milliseconds
 	private String timeTakenInMillis;
 
-	public RandomNumber() {
+	public SortDetails() {
 	}
 
-	public RandomNumber(String input, String output, String count) {
+	public SortDetails(String input, String output, String count) {
 		super();
 
 		this.input = input;

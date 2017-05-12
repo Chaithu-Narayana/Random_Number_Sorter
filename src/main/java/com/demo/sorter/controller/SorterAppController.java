@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.demo.sorter.model.RandomNumber;
+import com.demo.sorter.model.SortDetails;
 import com.demo.sorter.properties.SorterAppProperties;
 import com.demo.sorter.service.RandomNumberService;
 
@@ -22,7 +22,7 @@ import com.demo.sorter.service.RandomNumberService;
  */
 @Controller
 @RequestMapping("/index")
-public class RandomNumberController {
+public class SorterAppController {
 
 	@Autowired
 	private RandomNumberService randomNumberService;
@@ -83,9 +83,9 @@ public class RandomNumberController {
 	@RequestMapping(value = "/sort", method = RequestMethod.POST)
 	public ModelAndView sort(@RequestParam("generatedRandomNumbers") String randomNumbers) {
 		ModelAndView model = new ModelAndView("index");
-		List<RandomNumber> randomNumbersList = new ArrayList<RandomNumber>();
+		List<SortDetails> randomNumbersList = new ArrayList<SortDetails>();
 
-		RandomNumber randomNumber = new RandomNumber();
+		SortDetails randomNumber = new SortDetails();
 		randomNumber.setInput(randomNumbers);
 
 		//Invoke the REST microservice to sort the unordered numbers
