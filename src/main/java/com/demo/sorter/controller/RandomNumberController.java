@@ -1,4 +1,4 @@
-package com.randomsort.controller;
+package com.demo.sorter.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.randomsort.model.RandomNumber;
-import com.randomsort.properties.SorterAppProperties;
-import com.randomsort.service.RandomNumberService;
+import com.demo.sorter.model.RandomNumber;
+import com.demo.sorter.properties.SorterAppProperties;
+import com.demo.sorter.service.RandomNumberService;
 
 @Controller
 @RequestMapping("/index")

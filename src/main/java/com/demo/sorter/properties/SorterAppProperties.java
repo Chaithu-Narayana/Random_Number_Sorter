@@ -1,4 +1,4 @@
-package com.randomsort.properties;
+package com.demo.sorter.properties;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;

@@ -1,4 +1,4 @@
-package com.randomsort.controller;
+package com.demo.sorter.controller;
 
 import java.util.Arrays;
 import java.util.StringJoiner;
