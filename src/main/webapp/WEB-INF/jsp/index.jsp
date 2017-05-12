@@ -51,17 +51,19 @@
 		<table class="table table-hover table-responsive table-bordered">
 			<thead>
 				<tr bgcolor="#C0C0C0">
-					<th class="col-md-5"><b>Unsorted Numbers</b></th>
-					<th class="col-md-5"><b>Sorted Numbers</b></th>
+					<th class="col-md-4"><b>Unsorted Numbers</b></th>
+					<th class="col-md-4"><b>Sorted Numbers</b></th>
 					<th class="col-md-2"><b>No. Of Positions Changed</b></th>
+					<th class="col-md-2"><b>Time Taken (ms)</b></th>
 				</tr>
 			</thead>
 			<tbody>
 				<c:forEach items="${randomNumbersList}" var="randomNumber">
 					<tr>
-						<td class="col-md-5"><c:out value="${randomNumber.input}"></c:out></td>
-						<td class="col-md-5"><c:out value="${randomNumber.output}"></c:out></td>
+						<td class="col-md-4"><c:out value="${randomNumber.input}"></c:out></td>
+						<td class="col-md-4"><c:out value="${randomNumber.output}"></c:out></td>
 						<td class="col-md-2"><c:out value="${randomNumber.count}"></c:out></td>
+						<td class="col-md-2"><c:out value="${randomNumber.timeTakenInMillis}"></c:out></td>
 					</tr>
 				</c:forEach>
 			</tbody>
