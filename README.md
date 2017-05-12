@@ -29,3 +29,9 @@ http://localhost:8081/index/
 5. This applications takes the no. of random integers to be generated from the user as an input.
 6. Based on the input from the user, it generates the numbers and sorts them accordingly.
 7. The results are displayed with the help of an interactive GUI.
+
+Note: If step-4 throws a 404 error (happens on windows 7 and few machines), please close the process and follow the below step to launch the app:
+a. On your eclipse or IDE, go to Application.java class
+b. Right-Click and 'Run As' -> 'Java Application'
+c. Wait for the application to start
+d. Follow steps from step-4 above.
