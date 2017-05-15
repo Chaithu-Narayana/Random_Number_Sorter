@@ -6,14 +6,14 @@ Solution Proposed:
 
 The tech Stack used to achieve this solution and the associated reasons for selecting them is as below:
 
--Spring boot : To harness the power of using an embedded Servlet Container (Tomcat), database (H2) and Spring-MVC configuration without the need to set them up separately, avoiding boiler-plate code/configuration.
--Java 8 : To make use of the latest features and simplify the code, namely Lambda Expressions and Streams.
--H2 Database : The requirement demands a history of sorts even after restart. H2 database supplies a useful parameter 'DB_CLOSE_ON_EXIT=FALSE' that persits the results on the local system. So, even when the app is restarted, the results are not lost. All other in-memory databases lose the data when restarted.
--Spring-MVC : For easy interaction among different layers in the web application - mapping GUI with the middleware.
--Spring-Data-JPA : The DB operations in the assignments are simple CRUD operations. So, the choice of JPA to perform these simple operations and avoid boiler-plate code.
--Embedded Tomcat : Needed for development, may not be needed for deployment and demo purposes.
--JSP : Interactive GUI developed using JSP technology
--Maven : Advanced build tool to generate a deployable binary that can be shipped across.
+-Spring boot : To harness the power of using an embedded Servlet Container (Tomcat), database (H2) and Spring-MVC configuration without the need to set them up separately, avoiding boiler-plate code/configuration.  
+-Java 8 : To make use of the latest features and simplify the code, namely Lambda Expressions and Streams.  
+-H2 Database : The requirement demands a history of sorts even after restart. H2 database supplies a useful parameter 'DB_CLOSE_ON_EXIT=FALSE' that persits the results on the local system. So, even when the app is restarted, the results are not lost. All other in-memory databases lose the data when restarted.  
+-Spring-MVC : For easy interaction among different layers in the web application - mapping GUI with the middleware.  
+-Spring-Data-JPA : The DB operations in the assignments are simple CRUD operations. So, the choice of JPA to perform these simple operations and avoid boiler-plate code.  
+-Embedded Tomcat : Needed for development, may not be needed for deployment and demo purposes.  
+-JSP : Interactive GUI developed using JSP technology.  
+-Maven : Advanced build tool to generate a deployable binary that can be shipped across.  
 
 
 Steps to Set-up the app:
